@@ -128,7 +128,7 @@ class BPE:
         result = sum(splits_text, [])
         return result
 #importare i datset
-train_set = pd.read_csv('train.csv')
+"""train_set = pd.read_csv('train.csv')
 test_set = pd.read_csv("test.csv")
 
 # Utilizzo della pipeline BPE
@@ -154,11 +154,10 @@ def apply_bpe_to_series(series):
 # Applicare la funzione alla colonna desiderata del DataFrame
 train_set['Tokenized'] = apply_bpe_to_series(train_set['Description'])
 train_set['Tokenized'].head()
-
+"""
 'BPE PREADDESTRATO'
 
 from transformers import RobertaTokenizer
-import pandas as pd
 
 
 class BpeRobertaPipeline:
@@ -174,10 +173,10 @@ class BpeRobertaPipeline:
     def apply_pipeline(self, df, column_name):
         # Applica la pipeline di processamento del testo alla colonna specificata
         return df[column_name].apply(self.process_text)
-    
+   
 # Esempio di Utilizzo BpeRobertaPipeline
-
+"""
 pipeline = BpeRobertaPipeline()
 train_set['Processed_Text'] = pipeline.apply_pipeline(train_set, 'Description')
 
-print(train_set['Processed_Text'])
+print(train_set['Processed_Text'])"""
