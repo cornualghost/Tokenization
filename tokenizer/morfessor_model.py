@@ -6,7 +6,7 @@ def log_func(x):
     return int(round(math.log(x + 1, 2)))
 
 # Caricare il dataset
-train_set = pd.read_csv('train.csv')
+train_set = pd.read_csv('dataset/train.csv')
 
 # Estrazione il testo
 titoli = train_set['Description']

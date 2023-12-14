@@ -22,8 +22,8 @@ def clean_text(text_column):
     return clean_string
 
 #importare i datset
-train_set = pd.read_csv('train.csv')
-test_set = pd.read_csv("test.csv")
+train_set = pd.read_csv('dataset/train.csv')
+test_set = pd.read_csv("dataset/test.csv")
 
 
 # Esempio di utilizzo
