@@ -20,13 +20,3 @@ def clean_text(text_column):
         return ' '.join(w for w in text.split() if len(w) > 1 and w not in stop)
 
     return clean_string
-
-#importare i datset
-train_set = pd.read_csv('../dataset/train.csv')
-test_set = pd.read_csv("../dataset/test.csv")
-
-
-# Esempio di utilizzo
-clean_func = clean_text('Description')
-train_set['cleaned_text'] = train_set['Description'].apply(clean_func)
-train_set.head()
