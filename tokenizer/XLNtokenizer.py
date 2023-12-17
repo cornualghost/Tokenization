@@ -15,19 +15,4 @@ class XLNetTokenization(TransformerMixin):
     def fit(self, X, y=None, **fit_params):
         return self
     
-    
-# Creazione della pipeline
-#pipeline = Pipeline([
-#    ('xlnet_tokenization', XLNetTokenization())])
-
-# Esempio di utilizzo
-#train_set = pd.read_csv('train_set_bpe.csv')
-#test_set = pd.read_csv("test_set_bpe.csv")
-
-#train_set['XLN'] = pipeline.fit_transform(train_set['cleaned_text'])
-#test_set['XLN'] = pipeline.fit_transform(test_set['cleaned_text'])
-
-#rimozione liste
-#train_set['XLN'] = train_set['XLN'].apply(lambda x: ' '.join(map(str, x)) if isinstance(x, list) else x)
-#test_set['XLN'] = test_set['XLN'].apply(lambda x: ' '.join(map(str, x)) if isinstance(x, list) else x)
 

@@ -125,34 +125,7 @@ class BPE:
                 splits_text[idx] = split
         result = sum(splits_text, [])
         return result
-#importare i datset
-"""train_set = pd.read_csv('train.csv')
-test_set = pd.read_csv("test.csv")
 
-# Utilizzo della pipeline BPE
-# Sostituire con il  corpus sul quale si desidera addestrare bpe
-corpus = train_set['Title']
-
-vocab_size = 1000
-
-bpe_pipeline = BPEPipeline(vocab_size)
-bpe_pipeline.fit(corpus)
-
-
-# Esempio di tokenizzazione
-text = "Esempio di testo da tokenizzare"
-tokenized_text = bpe_pipeline.transform(text)
-print(tokenized_text)
-
-
-# Esempio di tokenizzazione BPE al dataset
-def apply_bpe_to_series(series):
-    return series.apply(bpe_pipeline.transform)
-
-# Applicare la funzione alla colonna desiderata del DataFrame
-train_set['Tokenized'] = apply_bpe_to_series(train_set['Description'])
-train_set['Tokenized'].head()
-"""
 'BPE PREADDESTRATO'
 
 from transformers import RobertaTokenizer
@@ -171,10 +144,3 @@ class BpeRobertaPipeline:
     def apply_pipeline(self, df, column_name):
         # Applica la pipeline di processamento del testo alla colonna specificata
         return df[column_name].apply(self.process_text)
-   
-# Esempio di Utilizzo BpeRobertaPipeline
-"""
-pipeline = BpeRobertaPipeline()
-train_set['Processed_Text'] = pipeline.apply_pipeline(train_set, 'Description')
-
-print(train_set['Processed_Text'])"""

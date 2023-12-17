@@ -17,17 +17,3 @@ class MosesTokenizationPipeline:
     def close(self):
         # Rilascia le risorse del tokenizzatore
         self.tokenizer.close()
-
-# Utilizzo della pipeline
-
-# Caricare il dataset
-#train_set = pd.read_csv('train.csv')
-#test_set= pd.read_csv('test.csv')
-#pipeline = MosesTokenizationPipeline('en')
-
-# Applicare la tokenizzazione
-#train_set['Moses'] = pipeline.tokenize_column(train_set, 'Description')
-#test_set['Moses'] = pipeline.tokenize_column(test_set, 'Description')
-
-
-#pipeline.close()

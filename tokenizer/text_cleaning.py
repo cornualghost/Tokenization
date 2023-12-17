@@ -7,7 +7,7 @@ import re
 nltk.download('stopwords')
 
 def clean_text(text_column):
-    # Definisci le stopwords in inglese come un set
+    # stopwords in inglese come un set
     stop = set(stopwords.words('english'))
 
     # Compila l'espressione regolare per la pulizia del testo
@@ -22,8 +22,8 @@ def clean_text(text_column):
     return clean_string
 
 #importare i datset
-train_set = pd.read_csv('dataset/train.csv')
-test_set = pd.read_csv("dataset/test.csv")
+train_set = pd.read_csv('../dataset/train.csv')
+test_set = pd.read_csv("../dataset/test.csv")
 
 
 # Esempio di utilizzo
