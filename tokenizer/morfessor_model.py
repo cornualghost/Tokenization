@@ -12,7 +12,7 @@ train_set = pd.read_csv('dataset/train.csv')
 titoli = train_set['Description']
 
 # Salvare i titoli in un nuovo file di testo
-path_del_file_titoli = 'titoli_per_morfessor.txt'
+path_del_file_titoli = 'tokenizer/titoli_per_morfessor.txt'
 with open(path_del_file_titoli, 'w', encoding='utf-8') as file:
     for titolo in titoli:
         file.write(titolo + '\n')
@@ -32,4 +32,4 @@ model.load_data(train_data, count_modifier=log_func)
 model.train_batch()
 
 # Salvare il modello addestrato
-io.write_binary_model_file("model.bin", model)
+io.write_binary_model_file("tokenizer/model.bin", model)
