@@ -15,7 +15,6 @@ class BPEPipeline:
             raise RuntimeError("Il tokenizzatore BPE non è stato ancora addestrato. Chiama prima il metodo fit.")
         return self.bpe.tokenize(text)
 
-# Classe BPE 
 class BPE:
     
     
@@ -126,7 +125,7 @@ class BPE:
         result = sum(splits_text, [])
         return result
 
-'BPE PREADDESTRATO'
+#BPE Roberta PREADDESTRATO
 
 from transformers import RobertaTokenizer
 
